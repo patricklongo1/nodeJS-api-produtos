@@ -11,7 +11,7 @@ module.exports = {
 
     async show(req, res){
         const product = await Product.findById(req.params.id)
-        return res.json(product)
+        return res.json(product) 
     },
 
     async store(req, res){
