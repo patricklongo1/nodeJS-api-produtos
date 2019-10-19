@@ -7,7 +7,7 @@ module.exports = {
         const {page = 1} = req.query
         const products = await Product.paginate({}, {page, limit: 10}) // Paginate substitui o Product.find() para retorno moderado de resultados
         return res.json(products)
-    },
+    }, 
 
     async show(req, res){
         const product = await Product.findById(req.params.id)
